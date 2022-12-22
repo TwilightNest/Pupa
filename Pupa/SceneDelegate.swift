@@ -17,6 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        configureInitialViewController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -49,7 +51,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
+    
+    private func configureInitialViewController() {
+        //проверяем есть ли авторизованый пользователь
+        if let data = UserDefaults.standard.data(forKey: "CurrentUser"){
+            let currentUser = try! JSONDecoder().decode(User.self, from: data)
+            let api = ApiProcessor()
+            let response = api.getUserByData(data: currentUser.Login)
+            if 400...499 ~= response.0 { // если не нашли в базе, удаляем и идём на страницу авторизации
+                UserDefaults.standard.removeObject(forKey: "CurrentUser")
+                window?.rootViewController = WorkspaceHelper.switchStoryboard(sbName: "Auth", controllerName: "Auth")
+            }
+        } else { // если нет то идём на страницу авторизации
+            window?.rootViewController = WorkspaceHelper.switchStoryboard(sbName: "Auth", controllerName: "Auth")
+        }
+    }
 }
-

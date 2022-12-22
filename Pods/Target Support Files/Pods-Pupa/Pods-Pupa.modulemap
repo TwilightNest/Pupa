@@ -1,0 +1,6 @@
+framework module Pods_Pupa {
+  umbrella header "Pods-Pupa-umbrella.h"
+
+  export *
+  module * { export * }
+}

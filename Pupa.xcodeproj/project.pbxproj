@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,18 +14,56 @@
 		ED1DE9162954A36C00841C0D /* Pupa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9142954A36C00841C0D /* Pupa.xcdatamodeld */; };
 		ED1DE9182954A36F00841C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1DE9172954A36F00841C0D /* Assets.xcassets */; };
 		ED1DE91B2954A36F00841C0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1DE9192954A36F00841C0D /* LaunchScreen.storyboard */; };
+		ED1DE9262954AA9C00841C0D /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1DE9252954AA9C00841C0D /* Auth.storyboard */; };
+		ED1DE9292954AB0700841C0D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9282954AB0700841C0D /* Extensions.swift */; };
+		ED1DE92E2954AB9A00841C0D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE92D2954AB9A00841C0D /* User.swift */; };
+		ED1DE9302954ABC000841C0D /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE92F2954ABC000841C0D /* UserLocation.swift */; };
+		ED1DE9322954ABCF00841C0D /* UserFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9312954ABCE00841C0D /* UserFriends.swift */; };
+		ED1DE9362954AC8B00841C0D /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9352954AC8B00841C0D /* AuthController.swift */; };
+		ED1DE9382954ACA300841C0D /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9372954ACA300841C0D /* RegisterController.swift */; };
+		ED1DE93D2954AE3100841C0D /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE93C2954AE3100841C0D /* MapController.swift */; };
+		ED1DE93F2954AE7200841C0D /* MessengerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE93E2954AE7200841C0D /* MessengerController.swift */; };
+		ED1DE9412954AE9600841C0D /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9402954AE9600841C0D /* ProfileController.swift */; };
+		ED1DE9432954AEC500841C0D /* AddFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9422954AEC500841C0D /* AddFriendController.swift */; };
+		ED1DE9482954B0D900841C0D /* ApiProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9472954B0D900841C0D /* ApiProcessor.swift */; };
+		ED1DE94A2954B0FB00841C0D /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9492954B0FB00841C0D /* HttpRequester.swift */; };
+		ED1DE94C2954B12000841C0D /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE94B2954B12000841C0D /* AlertHelper.swift */; };
+		ED1DE94E2954B19000841C0D /* WorkspaceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE94D2954B19000841C0D /* WorkspaceHelper.swift */; };
+		ED1DE9502954B1B000841C0D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE94F2954B1B000841C0D /* LocationManager.swift */; };
+		ED1DE9522954B20600841C0D /* MapboxMapHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9512954B20600841C0D /* MapboxMapHelper.swift */; };
+		F3ABCCC48E378A44E0AAC336 /* Pods_Pupa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9021F5CE142657508BE781 /* Pods_Pupa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DE81DC527009B9D47E5729B /* Pods-Pupa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pupa.release.xcconfig"; path = "Target Support Files/Pods-Pupa/Pods-Pupa.release.xcconfig"; sourceTree = "<group>"; };
+		2E9021F5CE142657508BE781 /* Pods_Pupa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pupa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC1034EA6721C0E9436F171 /* Pods-Pupa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pupa.debug.xcconfig"; path = "Target Support Files/Pods-Pupa/Pods-Pupa.debug.xcconfig"; sourceTree = "<group>"; };
 		ED1DE9082954A36C00841C0D /* Pupa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pupa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1DE90B2954A36C00841C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED1DE90D2954A36C00841C0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ED1DE90F2954A36C00841C0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ED1DE9122954A36C00841C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED1DE9152954A36C00841C0D /* Pupa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pupa.xcdatamodel; sourceTree = "<group>"; };
 		ED1DE9172954A36F00841C0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ED1DE91A2954A36F00841C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED1DE91C2954A36F00841C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED1DE9222954A66100841C0D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED1DE9232954A66200841C0D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED1DE9252954AA9C00841C0D /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		ED1DE9282954AB0700841C0D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		ED1DE92D2954AB9A00841C0D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ED1DE92F2954ABC000841C0D /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		ED1DE9312954ABCE00841C0D /* UserFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriends.swift; sourceTree = "<group>"; };
+		ED1DE9352954AC8B00841C0D /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		ED1DE9372954ACA300841C0D /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		ED1DE93C2954AE3100841C0D /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		ED1DE93E2954AE7200841C0D /* MessengerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerController.swift; sourceTree = "<group>"; };
+		ED1DE9402954AE9600841C0D /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		ED1DE9422954AEC500841C0D /* AddFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendController.swift; sourceTree = "<group>"; };
+		ED1DE9472954B0D900841C0D /* ApiProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProcessor.swift; sourceTree = "<group>"; };
+		ED1DE9492954B0FB00841C0D /* HttpRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequester.swift; sourceTree = "<group>"; };
+		ED1DE94B2954B12000841C0D /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		ED1DE94D2954B19000841C0D /* WorkspaceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceHelper.swift; sourceTree = "<group>"; };
+		ED1DE94F2954B1B000841C0D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		ED1DE9512954B20600841C0D /* MapboxMapHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxMapHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +71,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3ABCCC48E378A44E0AAC336 /* Pods_Pupa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66AEA285DA86D5D3871D61D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E9021F5CE142657508BE781 /* Pods_Pupa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFF0401BDD5A953F874DF695 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEC1034EA6721C0E9436F171 /* Pods-Pupa.debug.xcconfig */,
+				1DE81DC527009B9D47E5729B /* Pods-Pupa.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ED1DE8FF2954A36B00841C0D = {
 			isa = PBXGroup;
 			children = (
 				ED1DE90A2954A36C00841C0D /* Pupa */,
 				ED1DE9092954A36C00841C0D /* Products */,
+				CFF0401BDD5A953F874DF695 /* Pods */,
+				66AEA285DA86D5D3871D61D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +116,137 @@
 		ED1DE90A2954A36C00841C0D /* Pupa */ = {
 			isa = PBXGroup;
 			children = (
+				ED1DE9242954AA5C00841C0D /* storyboards */,
+				ED1DE92C2954AB6000841C0D /* controllers */,
+				ED1DE92A2954AB4000841C0D /* models */,
+				ED1DE92B2954AB5600841C0D /* helpers */,
+				ED1DE9272954AAE600841C0D /* extensions */,
 				ED1DE90B2954A36C00841C0D /* AppDelegate.swift */,
 				ED1DE90D2954A36C00841C0D /* SceneDelegate.swift */,
 				ED1DE90F2954A36C00841C0D /* ViewController.swift */,
-				ED1DE9112954A36C00841C0D /* Main.storyboard */,
 				ED1DE9172954A36F00841C0D /* Assets.xcassets */,
-				ED1DE9192954A36F00841C0D /* LaunchScreen.storyboard */,
 				ED1DE91C2954A36F00841C0D /* Info.plist */,
 				ED1DE9142954A36C00841C0D /* Pupa.xcdatamodeld */,
 			);
 			path = Pupa;
+			sourceTree = "<group>";
+		};
+		ED1DE9242954AA5C00841C0D /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE9252954AA9C00841C0D /* Auth.storyboard */,
+				ED1DE9112954A36C00841C0D /* Main.storyboard */,
+				ED1DE9192954A36F00841C0D /* LaunchScreen.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		ED1DE9272954AAE600841C0D /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE9282954AB0700841C0D /* Extensions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		ED1DE92A2954AB4000841C0D /* models */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE92D2954AB9A00841C0D /* User.swift */,
+				ED1DE92F2954ABC000841C0D /* UserLocation.swift */,
+				ED1DE9312954ABCE00841C0D /* UserFriends.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		ED1DE92B2954AB5600841C0D /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE9442954B07100841C0D /* api */,
+				ED1DE9452954B07B00841C0D /* ui */,
+				ED1DE9462954B08400841C0D /* location */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		ED1DE92C2954AB6000841C0D /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE9342954AC4D00841C0D /* auth */,
+				ED1DE9332954AC4400841C0D /* main */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		ED1DE9332954AC4400841C0D /* main */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE9392954ADE300841C0D /* map */,
+				ED1DE93A2954ADEB00841C0D /* messenger */,
+				ED1DE93B2954ADF500841C0D /* profile */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		ED1DE9342954AC4D00841C0D /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE9352954AC8B00841C0D /* AuthController.swift */,
+				ED1DE9372954ACA300841C0D /* RegisterController.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		ED1DE9392954ADE300841C0D /* map */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE93C2954AE3100841C0D /* MapController.swift */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		ED1DE93A2954ADEB00841C0D /* messenger */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE93E2954AE7200841C0D /* MessengerController.swift */,
+			);
+			path = messenger;
+			sourceTree = "<group>";
+		};
+		ED1DE93B2954ADF500841C0D /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE9402954AE9600841C0D /* ProfileController.swift */,
+				ED1DE9422954AEC500841C0D /* AddFriendController.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		ED1DE9442954B07100841C0D /* api */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE9472954B0D900841C0D /* ApiProcessor.swift */,
+				ED1DE9492954B0FB00841C0D /* HttpRequester.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		ED1DE9452954B07B00841C0D /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE94B2954B12000841C0D /* AlertHelper.swift */,
+				ED1DE94D2954B19000841C0D /* WorkspaceHelper.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		ED1DE9462954B08400841C0D /* location */ = {
+			isa = PBXGroup;
+			children = (
+				ED1DE94F2954B1B000841C0D /* LocationManager.swift */,
+				ED1DE9512954B20600841C0D /* MapboxMapHelper.swift */,
+			);
+			path = location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED1DE91F2954A36F00841C0D /* Build configuration list for PBXNativeTarget "Pupa" */;
 			buildPhases = (
+				E8E5E5EFB96453DC1D0ADD57 /* [CP] Check Pods Manifest.lock */,
 				ED1DE9042954A36C00841C0D /* Sources */,
 				ED1DE9052954A36C00841C0D /* Frameworks */,
 				ED1DE9062954A36C00841C0D /* Resources */,
+				FED23B60AF09F0C51DD5A34C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,12 +287,11 @@
 				};
 			};
 			buildConfigurationList = ED1DE9032954A36B00841C0D /* Build configuration list for PBXProject "Pupa" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = ED1DE8FF2954A36B00841C0D;
 			productRefGroup = ED1DE9092954A36C00841C0D /* Products */;
@@ -128,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1DE9262954AA9C00841C0D /* Auth.storyboard in Resources */,
 				ED1DE91B2954A36F00841C0D /* LaunchScreen.storyboard in Resources */,
 				ED1DE9182954A36F00841C0D /* Assets.xcassets in Resources */,
 				ED1DE9132954A36C00841C0D /* Main.storyboard in Resources */,
@@ -136,14 +317,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E8E5E5EFB96453DC1D0ADD57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pupa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FED23B60AF09F0C51DD5A34C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pupa/Pods-Pupa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pupa/Pods-Pupa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pupa/Pods-Pupa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ED1DE9042954A36C00841C0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1DE9382954ACA300841C0D /* RegisterController.swift in Sources */,
+				ED1DE9292954AB0700841C0D /* Extensions.swift in Sources */,
+				ED1DE9482954B0D900841C0D /* ApiProcessor.swift in Sources */,
+				ED1DE94E2954B19000841C0D /* WorkspaceHelper.swift in Sources */,
 				ED1DE9102954A36C00841C0D /* ViewController.swift in Sources */,
+				ED1DE93D2954AE3100841C0D /* MapController.swift in Sources */,
+				ED1DE92E2954AB9A00841C0D /* User.swift in Sources */,
+				ED1DE9412954AE9600841C0D /* ProfileController.swift in Sources */,
 				ED1DE90C2954A36C00841C0D /* AppDelegate.swift in Sources */,
+				ED1DE9522954B20600841C0D /* MapboxMapHelper.swift in Sources */,
+				ED1DE9362954AC8B00841C0D /* AuthController.swift in Sources */,
 				ED1DE90E2954A36C00841C0D /* SceneDelegate.swift in Sources */,
+				ED1DE9302954ABC000841C0D /* UserLocation.swift in Sources */,
+				ED1DE93F2954AE7200841C0D /* MessengerController.swift in Sources */,
+				ED1DE94C2954B12000841C0D /* AlertHelper.swift in Sources */,
+				ED1DE9432954AEC500841C0D /* AddFriendController.swift in Sources */,
+				ED1DE9322954ABCF00841C0D /* UserFriends.swift in Sources */,
+				ED1DE94A2954B0FB00841C0D /* HttpRequester.swift in Sources */,
+				ED1DE9502954B1B000841C0D /* LocationManager.swift in Sources */,
 				ED1DE9162954A36C00841C0D /* Pupa.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,7 +393,7 @@
 		ED1DE9112954A36C00841C0D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ED1DE9122954A36C00841C0D /* Base */,
+				ED1DE9222954A66100841C0D /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +401,7 @@
 		ED1DE9192954A36F00841C0D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ED1DE91A2954A36F00841C0D /* Base */,
+				ED1DE9232954A66200841C0D /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -220,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,6 +525,7 @@
 		};
 		ED1DE9202954A36F00841C0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEC1034EA6721C0E9436F171 /* Pods-Pupa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,11 +534,13 @@
 				DEVELOPMENT_TEAM = FXTRN44ZC4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pupa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pupa;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,14 +548,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = twilightnest.Pupa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		ED1DE9212954A36F00841C0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DE81DC527009B9D47E5729B /* Pods-Pupa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,11 +568,13 @@
 				DEVELOPMENT_TEAM = FXTRN44ZC4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pupa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pupa;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,9 +582,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = twilightnest.Pupa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

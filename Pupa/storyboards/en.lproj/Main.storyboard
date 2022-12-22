@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l2P-ea-0kv">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DQT-ak-ohp">
+            <objects>
+                <tabBarController storyboardIdentifier="Main" id="l2P-ea-0kv" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f1Z-d6-fkG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Bh7-Du-xDJ" kind="relationship" relationship="viewControllers" id="BuK-kx-mks"/>
+                        <segue destination="ijw-OC-MSz" kind="relationship" relationship="viewControllers" id="TFW-e0-ZOE"/>
+                        <segue destination="USU-Rv-H3D" kind="relationship" relationship="viewControllers" id="5eR-wr-osp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65B-4s-KFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2020" y="651"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="euY-6E-F9R">
+            <objects>
+                <viewController title="Map" id="Bh7-Du-xDJ" customClass="MapController" customModule="Pupa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GxM-ce-IyZ" userLabel="Map View" customClass="MapView" customModule="MapboxMaps">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZS8-g1-1MK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleURI__" value="mapbox://styles/twilightnest/cl88v4g18004q15p1f2yw3nr0"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="BNc-ti-6K1"/>
+                    <connections>
+                        <outlet property="mapView" destination="GxM-ce-IyZ" id="D9O-h9-cFT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdx-d3-ekd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310" y="-291"/>
+        </scene>
+        <!--Messager-->
+        <scene sceneID="qNE-zu-wYo">
+            <objects>
+                <viewController title="Messager" id="ijw-OC-MSz" customClass="MessengerController" customModule="Pupa" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Messenger" id="KMp-Pz-SoC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jh1-5G-EYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310" y="361"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="ogk-6Q-Sww">
+            <objects>
+                <viewController title="Profile" id="USU-Rv-H3D" customClass="ProfileController" customModule="Pupa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M7u-vy-pYU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ki-pl-jZW">
+                                <rect key="frame" x="71.666666666666686" y="44" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="5Lt-hU-hFr"/>
+                                    <constraint firstAttribute="height" constant="50" id="XUv-eH-ghh"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="UserName">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="MarkerFelt-Wide"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3r-X0-t2M">
+                                <rect key="frame" x="301" y="51.666666666666657" width="82" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log out"/>
+                                <connections>
+                                    <action selector="logOutButtonClick" destination="USU-Rv-H3D" eventType="touchUpInside" id="kmh-qj-WfI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4q-UN-n2v">
+                                <rect key="frame" x="279" y="724" width="104" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add friend"/>
+                                <connections>
+                                    <segue destination="8xx-Y3-wad" kind="show" id="zkH-Be-FdC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d0R-Pg-sFV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ki-pl-jZW" firstAttribute="centerY" secondItem="d0R-Pg-sFV" secondAttribute="top" constant="10" id="Pw1-b1-JeK"/>
+                            <constraint firstItem="W3r-X0-t2M" firstAttribute="centerY" secondItem="d0R-Pg-sFV" secondAttribute="top" constant="10" id="V95-Zf-95W"/>
+                            <constraint firstItem="W3r-X0-t2M" firstAttribute="right" secondItem="d0R-Pg-sFV" secondAttribute="right" constant="-10" id="cAg-S2-keU"/>
+                            <constraint firstItem="n4q-UN-n2v" firstAttribute="right" secondItem="d0R-Pg-sFV" secondAttribute="right" constant="-10" id="dKX-Dv-Svn"/>
+                            <constraint firstItem="2Ki-pl-jZW" firstAttribute="centerX" secondItem="d0R-Pg-sFV" secondAttribute="centerX" id="mhO-DF-yaY"/>
+                            <constraint firstItem="n4q-UN-n2v" firstAttribute="bottom" secondItem="d0R-Pg-sFV" secondAttribute="bottom" constant="-10" id="qgG-HF-LnI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="JZN-LE-nUp"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="2Ki-pl-jZW" id="HM9-cc-ipc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4l-4p-eHq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310" y="1003"/>
+        </scene>
+        <!--AddFriedController-->
+        <scene sceneID="fW0-6m-S3Z">
+            <objects>
+                <viewController id="8xx-Y3-wad" userLabel="AddFriedController" customClass="AddFriendController" customModule="Pupa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2UB-q8-dmD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname email or phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fg5-qr-wD0">
+                                <rect key="frame" x="46.666666666666657" y="377" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5sR-hW-nbU"/>
+                                    <constraint firstAttribute="height" constant="40" id="hnL-Kl-tav"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pex-Hs-7o8">
+                                <rect key="frame" x="146.66666666666666" y="698" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6dB-nc-wh0"/>
+                                    <constraint firstAttribute="height" constant="35" id="t1o-P1-aeO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                <connections>
+                                    <action selector="addFriendButtonClick" destination="8xx-Y3-wad" eventType="touchUpInside" id="aPO-d1-fO1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="35c-Sb-4CA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fg5-qr-wD0" firstAttribute="centerY" secondItem="35c-Sb-4CA" secondAttribute="centerY" constant="-24" id="1ZV-4e-xS0"/>
+                            <constraint firstItem="pex-Hs-7o8" firstAttribute="centerX" secondItem="35c-Sb-4CA" secondAttribute="centerX" id="GiA-g3-FQU"/>
+                            <constraint firstItem="pex-Hs-7o8" firstAttribute="bottom" secondItem="35c-Sb-4CA" secondAttribute="bottom" constant="-50" id="a8B-bP-lph"/>
+                            <constraint firstItem="fg5-qr-wD0" firstAttribute="centerX" secondItem="35c-Sb-4CA" secondAttribute="centerX" id="vTg-Ws-od9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hha-4P-U20"/>
+                    <connections>
+                        <outlet property="friendDataTextField" destination="fg5-qr-wD0" id="ahA-2Y-4v7"/>
+                        <segue destination="a3f-Tz-bjm" kind="unwind" identifier="unwindToAddFriendSegue" unwindAction="unwindToAddFriendWithSegue:" id="Kww-41-W64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRs-B5-pxo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="a3f-Tz-bjm" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="1002"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
