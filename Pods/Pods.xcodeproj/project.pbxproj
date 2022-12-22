@@ -551,7 +551,7 @@
 		4F333621A58E2CA1E26D46F7F220D673 /* LocationPermissionsDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationPermissionsDelegate.swift; path = Sources/MapboxMaps/Location/LocationPermissionsDelegate.swift; sourceTree = "<group>"; };
 		4F5E862063C32AAD3885C70BE28D1696 /* DefaultViewportTransitionAnimationSpecProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultViewportTransitionAnimationSpecProvider.swift; path = Sources/MapboxMaps/Viewport/Transitions/Default/DefaultViewportTransitionAnimationSpecProvider.swift; sourceTree = "<group>"; };
 		4FE2018208891139725A6CD034A0B2F4 /* NotificationCenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NotificationCenterProtocol.swift; path = Sources/MapboxMaps/Foundation/RetroactiveConformances/NotificationCenterProtocol.swift; sourceTree = "<group>"; };
-		504CE9473CDB9F0B95C72BA4BF8F4273 /* Turf */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Turf; path = Turf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		504CE9473CDB9F0B95C72BA4BF8F4273 /* Turf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Turf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		505BCFDF2C11B583FB6C1CE74DC44533 /* DelegatingViewAnnotationPositionsUpdateListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegatingViewAnnotationPositionsUpdateListener.swift; path = Sources/MapboxMaps/Annotations/DelegatingViewAnnotationPositionsUpdateListener.swift; sourceTree = "<group>"; };
 		511ABEB0EBA531C74835B4DF04EEEBA6 /* Puck3D.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Puck3D.swift; path = Sources/MapboxMaps/Location/Puck/Puck3D.swift; sourceTree = "<group>"; };
 		51412BA164535C19FE285CA377F3E097 /* CompassDirectionFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompassDirectionFormatter.swift; path = Sources/MapboxMaps/Ornaments/Compass/CompassDirectionFormatter.swift; sourceTree = "<group>"; };
@@ -608,7 +608,7 @@
 		6DCC14216E2AA187982FE622B895DD42 /* LayerPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerPosition.swift; path = Sources/MapboxMaps/Foundation/Extensions/Core/LayerPosition.swift; sourceTree = "<group>"; };
 		6DDE5E22090497913DFE6B5FDF81618C /* Array+CodingKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+CodingKey.swift"; path = "Sources/MapboxMaps/Foundation/DictionaryCoding/Array+CodingKey.swift"; sourceTree = "<group>"; };
 		6E19AB9F9BADD19596132D45FDC712AF /* ViewportState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewportState.swift; path = Sources/MapboxMaps/Viewport/ViewportState.swift; sourceTree = "<group>"; };
-		6E6CD80661687B39BD2D45E45AA724F7 /* MapboxMaps */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MapboxMaps; path = MapboxMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E6CD80661687B39BD2D45E45AA724F7 /* MapboxMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapboxMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8148E0DF53CFF91FAFBC678D4BBAD5 /* CompassDirectionLong.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CompassDirectionLong.strings; path = fr.lproj/CompassDirectionLong.strings; sourceTree = "<group>"; };
 		6ED42DF544736106A9CD879C10C613C5 /* MapEvents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapEvents.swift; path = Sources/MapboxMaps/Foundation/Extensions/Core/MapEvents.swift; sourceTree = "<group>"; };
 		70ED1255FD84B4101D531736A5ED22D7 /* AnnotationOrchestrator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnnotationOrchestrator.swift; path = Sources/MapboxMaps/Annotations/AnnotationOrchestrator.swift; sourceTree = "<group>"; };
@@ -1209,9 +1209,9 @@
 		4DD39659C36E05BEF82F03CD07594560 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E6CD80661687B39BD2D45E45AA724F7 /* MapboxMaps */,
+				6E6CD80661687B39BD2D45E45AA724F7 /* MapboxMaps.framework */,
 				254ACE46DD0A9CF8C5F97A3419FEA576 /* Pods-Pupa */,
-				504CE9473CDB9F0B95C72BA4BF8F4273 /* Turf */,
+				504CE9473CDB9F0B95C72BA4BF8F4273 /* Turf.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1416,7 +1416,7 @@
 			);
 			name = MapboxMaps;
 			productName = MapboxMaps;
-			productReference = 6E6CD80661687B39BD2D45E45AA724F7 /* MapboxMaps */;
+			productReference = 6E6CD80661687B39BD2D45E45AA724F7 /* MapboxMaps.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		65241501A90844E924E6FEC62E9C051D /* Turf */ = {
@@ -1434,7 +1434,7 @@
 			);
 			name = Turf;
 			productName = Turf;
-			productReference = 504CE9473CDB9F0B95C72BA4BF8F4273 /* Turf */;
+			productReference = 504CE9473CDB9F0B95C72BA4BF8F4273 /* Turf.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A0B505424381FC847A75682974C8DD46 /* Pods-Pupa */ = {
@@ -1467,7 +1467,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1420;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -2122,6 +2122,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -2215,7 +2216,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2242,7 +2243,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MapboxMaps/MapboxMaps-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MapboxMaps/MapboxMaps-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2277,7 +2278,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Turf/Turf-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Turf/Turf-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2332,6 +2333,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -2366,7 +2368,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2384,7 +2386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2426,7 +2428,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Turf/Turf-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Turf/Turf-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2452,7 +2454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2478,7 +2480,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MapboxMaps/MapboxMaps-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MapboxMaps/MapboxMaps-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

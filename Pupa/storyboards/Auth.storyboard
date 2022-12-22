@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="width" constant="100" id="rge-GE-Mbe"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
                                 <connections>
                                     <action selector="signInButtonClick" destination="jws-5g-cf5" eventType="touchUpInside" id="yjh-h3-aD0"/>
                                 </connections>
@@ -65,7 +65,7 @@
                                     <constraint firstAttribute="height" constant="35" id="vkM-WR-Z6u"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign up"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
                                 <connections>
                                     <segue destination="lpc-UT-wil" kind="show" identifier="RegistrationSegue" id="OUY-0H-ddD"/>
                                 </connections>
