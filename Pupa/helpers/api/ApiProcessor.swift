@@ -5,8 +5,9 @@ class ApiProcessor {
     let usersUrl: String = "/Users"
     let userLocationsUrl: String = "/UsersLocations"
     let userFriendsUrl: String = "/UserFriends"
+    let inboxPaticipantsUrl: String = "/InboxPaticipants"
     
-    var currentUser = User()
+    var currentUser: User!
     
     init(){
         do {
@@ -19,48 +20,76 @@ class ApiProcessor {
     }
     
     func registerNewUser(newUser: User) -> Int {
-        
-        let responseCode = HttpRequester.sendSyncAddUserRequest(urlValue: baseUrl + usersUrl, jsonDictionary: newUser.getJsonDictionary())
+        let responseCode = HttpRequester.sendSyncPostRequest(urlValue: baseUrl + usersUrl, dataToPost: newUser.toData())
         
         return responseCode;
     }
     
     func getUserByData(data: String) -> (Int, User?) {
-        let response = HttpRequester.sendSyncGetUserByDataRequest(urlValue: baseUrl + usersUrl, dataParametr: data)
-        switch response.0 {
+        let response = HttpRequester.sendSyncGetRequest(urlValue: baseUrl + usersUrl, parametr: data)
+        let responseCode = response.0
+        let responseJson = response.1
+        switch responseCode {
         case 200...299:
-            return (response.0, User(json: response.1))
-        case 400...499:
-            return (response.0, nil)
+            return (response.0, User(json: responseJson!))
         default:
-            return (0,User())
+            AlertHelper.showAlertMessage(title: "Error", message: "at getUserByData, response code = \(responseCode)")
+            return (0, nil)
         }
     }
     
-    func getUserLocation(userId: UUID) -> UserLocation {
-        let userLocationDictionary = HttpRequester.sendSyncGetUserLocationRequest(urlValue: baseUrl + userLocationsUrl, userId: userId).1
-        return UserLocation(json: userLocationDictionary)
+    func getUserLocation(userId: UUID) -> UserLocation? {
+        let response = HttpRequester.sendSyncGetRequest(urlValue: baseUrl + userLocationsUrl, parametr: userId.uuidString)
+        
+        let responseCode = response.0
+        let responseJson = response.1
+        
+        switch responseCode {
+        case 200...299:
+            return UserLocation(json: responseJson!)
+        default:
+            AlertHelper.showAlertMessage(title: "Error", message: "at getUserLocation, response code = \(responseCode)")
+            return nil
+        }
     }
     
     func updateUserLocation(newUserLocation: UserLocation) -> Int {
-        let responseCode = HttpRequester.sendSyncUpdateUserLocationRequest(urlValue: baseUrl + userLocationsUrl, newUserLocation: newUserLocation)
+        let responseCode = HttpRequester.sendSyncPutRequest(urlValue: baseUrl + userLocationsUrl, dataToPut: newUserLocation.toJson())
         return responseCode
     }
     
-    func getUserFriends(userId: UUID) -> (Int, UserFriends?) {
-        let response = HttpRequester.sendSyncGetUserFriendsRequest(urlValue: baseUrl + userFriendsUrl, userId: userId)
-        switch response.0 {
+    func getUserFriends(userId: UUID) -> UserFriends? {
+        let response = HttpRequester.sendSyncGetRequest(urlValue: baseUrl + userFriendsUrl, parametr: userId.uuidString)
+        
+        let responseCode = response.0
+        let responseJson = response.1
+        
+        switch responseCode {
         case 200...299:
-            return (response.0, UserFriends(json: response.1))
-        case 400...499:
-            return (response.0, nil)
+            return UserFriends(json: responseJson!)
         default:
-            return (0,UserFriends())
+            AlertHelper.showAlertMessage(title: "Error", message: "at getUserFriends, response code = \(responseCode)")
+            return nil
         }
     }
     
     func updateUserFriends(newUserFriends: UserFriends) -> Int {
-        let responseCode = HttpRequester.sendSyncUpdateUserFriendsRequest(urlValue: baseUrl + userFriendsUrl, newUserFriends: newUserFriends)
+        let responseCode = HttpRequester.sendSyncPutRequest(urlValue: baseUrl + userFriendsUrl, dataToPut: newUserFriends.toJson())
         return responseCode
+    }
+    
+    func getAllUserChats(userId: UUID) -> [Inbox]? {
+        let response = HttpRequester.sendSyncGetRequest(urlValue: baseUrl + inboxPaticipantsUrl, parametr: userId.uuidString)
+        
+        let responseCode = response.0
+        let responseJson = response.1
+        
+        switch responseCode {
+        case 200...299:
+            return nil
+        default:
+            AlertHelper.showAlertMessage(title: "Error", message: "at getUserFriends, response code = \(responseCode)")
+            return nil
+        }
     }
 }

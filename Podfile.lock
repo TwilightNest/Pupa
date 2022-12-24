@@ -1,4 +1,7 @@
 PODS:
+  - InputBarAccessoryView (5.5.0):
+    - InputBarAccessoryView/Core (= 5.5.0)
+  - InputBarAccessoryView/Core (5.5.0)
   - MapboxCommon (23.2.1)
   - MapboxCoreMaps (10.10.0):
     - MapboxCommon (~> 23.2)
@@ -8,26 +11,33 @@ PODS:
     - MapboxMobileEvents (= 1.0.10)
     - Turf (~> 2.0)
   - MapboxMobileEvents (1.0.10)
+  - MessageKit (3.8.0):
+    - InputBarAccessoryView (~> 5.5.0)
   - Turf (2.6.1)
 
 DEPENDENCIES:
-  - MapboxMaps (= 10.10.1)
+  - MapboxMaps
+  - MessageKit
 
 SPEC REPOS:
   trunk:
+    - InputBarAccessoryView
     - MapboxCommon
     - MapboxCoreMaps
     - MapboxMaps
     - MapboxMobileEvents
+    - MessageKit
     - Turf
 
 SPEC CHECKSUMS:
+  InputBarAccessoryView: 1d7b0a672b36e370f01f264b3907ef39d03328e3
   MapboxCommon: 235bb9c27a8985d982e17f216795b1f7ab526782
   MapboxCoreMaps: 4075a9e415b9b3ab6229d09623fef5f791826a5b
   MapboxMaps: 0c2f7722016bc56aa27b5e6bcf72ae4df7a98670
   MapboxMobileEvents: de50b3a4de180dd129c326e09cd12c8adaaa46d6
+  MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
   Turf: 469ce2c3d22e5e8e4818d5a3b254699a5c89efa4
 
-PODFILE CHECKSUM: 26f1839be589c5a8985ec81705ee921b770c86df
+PODFILE CHECKSUM: b1ca7755d2d216f4b0161864b6ae8cd361a5eff7
 
 COCOAPODS: 1.11.3

@@ -7,6 +7,6 @@ target 'Pupa' do
 
   # Pods for Pupa
   
-  pod 'MapboxMaps', '10.10.1'
-  
+  pod 'MapboxMaps'#, '10.10.1'
+  pod 'MessageKit'
 end

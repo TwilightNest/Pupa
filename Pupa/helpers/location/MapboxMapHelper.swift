@@ -27,13 +27,13 @@ class MapboxMapHelper: LocationPermissionsDelegate {
     }
     
     func updateFriendsLocation() {
-        let userFriends = api.getUserFriends(userId: api.currentUser.Id).1
+        let userFriends = api.getUserFriends(userId: api.currentUser.Id)
         
         for friendId in userFriends!.FriendsIds {
             let friendLocation = api.getUserLocation(userId: friendId)
             
             // Create the circle annotation.
-            var circleAnnotation = CircleAnnotation(centerCoordinate: friendLocation.getCLLocation())
+            var circleAnnotation = CircleAnnotation(centerCoordinate: friendLocation!.toCLLocation())
             circleAnnotation.circleColor = StyleColor(.blue)
             circleAnnotation.circleRadius = 10
             
@@ -50,7 +50,7 @@ class MapboxMapHelper: LocationPermissionsDelegate {
     
     func moveCameraToUser(){
         let userLocation = api.getUserLocation(userId: api.currentUser.Id)
-        let CameraOptions = CameraOptions(center: userLocation.getCLLocation(), zoom: 12, pitch: 40)
+        let CameraOptions = CameraOptions(center: userLocation!.toCLLocation(), zoom: 12, pitch: 40)
         mapView.camera.fly(to: CameraOptions, duration: 1.5)
     }
 }

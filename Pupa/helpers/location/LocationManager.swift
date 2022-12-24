@@ -30,6 +30,6 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         
         map.updateFriendsLocation()
         
-        AlertHelper.showAlertDialog(title: "Location update event\n responseCode = \(responseCode)", message: newUserLocation.getString())
+        AlertHelper.showAlertDialog(title: "Location update event\n responseCode = \(responseCode)", message: newUserLocation.toString())
     }
 }

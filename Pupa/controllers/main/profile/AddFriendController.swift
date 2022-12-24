@@ -16,8 +16,8 @@ class AddFriendController: UIViewController {
                 AlertHelper.showAlertMessage(title: "Error", message: "You can't add yourself as friend")
                 return
             }
-            let currentUserFriends = api.getUserFriends(userId:api.currentUser.Id).1
-            let friendUserFriends = api.getUserFriends(userId:newFriend!.Id).1
+            let currentUserFriends = api.getUserFriends(userId:api.currentUser.Id)
+            let friendUserFriends = api.getUserFriends(userId:newFriend!.Id)
             currentUserFriends?.FriendsIds.append(newFriend!.Id)
             friendUserFriends?.FriendsIds.append(api.currentUser.Id)
             

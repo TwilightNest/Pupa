@@ -20,7 +20,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Bh7-Du-xDJ" kind="relationship" relationship="viewControllers" id="BuK-kx-mks"/>
-                        <segue destination="ijw-OC-MSz" kind="relationship" relationship="viewControllers" id="TFW-e0-ZOE"/>
+                        <segue destination="CMQ-S2-eSi" kind="relationship" relationship="viewControllers" id="TZQ-hf-OcP"/>
                         <segue destination="USU-Rv-H3D" kind="relationship" relationship="viewControllers" id="5eR-wr-osp"/>
                     </connections>
                 </tabBarController>
@@ -50,15 +50,56 @@
             </objects>
             <point key="canvasLocation" x="-310" y="-291"/>
         </scene>
-        <!--Messager-->
-        <scene sceneID="qNE-zu-wYo">
+        <!--NavigationController-->
+        <scene sceneID="QK8-qB-Qay">
             <objects>
-                <viewController title="Messager" id="ijw-OC-MSz" customClass="MessengerController" customModule="Pupa" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messenger" id="KMp-Pz-SoC"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jh1-5G-EYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="CMQ-S2-eSi" userLabel="NavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Messenger" id="Q3D-fu-TgA" userLabel="Messenger"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="47j-BE-rD2">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EWO-io-QNK" kind="relationship" relationship="rootViewController" id="WQX-1A-nxY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXo-JF-qKP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-310" y="361"/>
+            <point key="canvasLocation" x="-311" y="361"/>
+        </scene>
+        <!--MessagesController-->
+        <scene sceneID="y0P-HX-I8h">
+            <objects>
+                <tableViewController id="EWO-io-QNK" userLabel="MessagesController" customClass="MessangesController" customModule="Pupa" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Tma-12-mI2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="EWO-io-QNK" id="xgB-xA-hTW"/>
+                            <outlet property="delegate" destination="EWO-io-QNK" id="1Ld-ro-Tkr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Messages" id="c5d-g0-eIH">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="8Af-Sf-ARi">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="VcI-0t-oL5">
+                                <rect key="frame" x="277" y="5" width="100" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New"/>
+                                <connections>
+                                    <action selector="onNewMessageButtonClick" destination="EWO-io-QNK" eventType="touchUpInside" id="q3s-b5-sDh"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="Tma-12-mI2" id="4Qq-lJ-LTA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lMs-A3-6QQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="361"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ogk-6Q-Sww">
@@ -85,7 +126,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3r-X0-t2M">
-                                <rect key="frame" x="301" y="51.666666666666657" width="82" height="35"/>
+                                <rect key="frame" x="301" y="51.666666666666671" width="82" height="34.666666666666671"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out"/>
                                 <connections>
