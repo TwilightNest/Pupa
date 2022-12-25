@@ -1,7 +1,7 @@
 import UIKit
 import MapboxMaps
 
-class MapboxMapHelper: LocationPermissionsDelegate {
+public class MapboxMapHelper: LocationPermissionsDelegate {
 
     var mapView: MapView!
     var lm = LocationManager()
@@ -27,20 +27,22 @@ class MapboxMapHelper: LocationPermissionsDelegate {
     }
     
     func updateFriendsLocation() {
-        let userFriends = api.getUserFriends(userId: api.currentUser.Id)
+        let userRelationships = api.getUserRelationships(userId: api.currentUser.Id)
         
-        for friendId in userFriends!.FriendsIds {
-            let friendLocation = api.getUserLocation(userId: friendId)
+        if userRelationships != nil {
+            userRelationships?.forEach({ relationship in
+                let friendLocation = api.getUserLocation(userId: relationship.secondUserId)
+                
+                // Create the circle annotation.
+                var circleAnnotation = CircleAnnotation(centerCoordinate: friendLocation!.toCLLocation())
+                circleAnnotation.circleColor = StyleColor(.blue)
+                circleAnnotation.circleRadius = 10
+                
+                friends.append(circleAnnotation)
+            })
             
-            // Create the circle annotation.
-            var circleAnnotation = CircleAnnotation(centerCoordinate: friendLocation!.toCLLocation())
-            circleAnnotation.circleColor = StyleColor(.blue)
-            circleAnnotation.circleRadius = 10
-            
-            friends.append(circleAnnotation)
+            annotationManager.annotations = friends
         }
-        
-        annotationManager.annotations = friends
     }
     
     func moveCameraToLocation(newLocation: CLLocation) {

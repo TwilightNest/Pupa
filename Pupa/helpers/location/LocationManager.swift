@@ -24,11 +24,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let newUserLocation = UserLocation(UserId: api.currentUser.Id, Latitude: locations.last!.coordinate.latitude, Longitude: locations.last!.coordinate.longitude)
+        let newUserLocation = Location(objectId: api.currentUser.Id, latitude: locations.last!.coordinate.latitude, longitude: locations.last!.coordinate.longitude)
         
-        let responseCode = api.updateUserLocation(newUserLocation: newUserLocation)
-        
-        map.updateFriendsLocation()
+        let responseCode = api.updateUserLocation(newLocation: newUserLocation)
         
         AlertHelper.showAlertDialog(title: "Location update event\n responseCode = \(responseCode)", message: newUserLocation.toString())
     }

@@ -17,7 +17,7 @@ class RegisterController: UIViewController {
             newUser.Email = emailTextField.text!
             newUser.PhoneNumber = phoneNumberTextField.text!
             newUser.Password = passwordTextField.text!
-            let responseCode = api.registerNewUser(newUser: newUser)
+            let responseCode = api.addNewUser(newUser: newUser)
             if ((200...299) ~= responseCode){
                 WorkspaceHelper.performSegue(parentController: self, segueIdentifier: "unwindToSignUpSegue")
             } else {

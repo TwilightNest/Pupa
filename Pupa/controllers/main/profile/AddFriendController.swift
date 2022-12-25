@@ -9,28 +9,54 @@ class AddFriendController: UIViewController {
     @IBAction func addFriendButtonClick() {
         let getUserByDataResponse = api.getUserByData(data: friendDataTextField.text!)
         
-        switch getUserByDataResponse.0 {
+        let responseCode = getUserByDataResponse.0
+        let newFriend = getUserByDataResponse.1
+        
+        switch responseCode{
         case 200...299:
-            let newFriend = getUserByDataResponse.1
             if api.currentUser.Id == newFriend!.Id{
                 AlertHelper.showAlertMessage(title: "Error", message: "You can't add yourself as friend")
                 return
             }
-            let currentUserFriends = api.getUserFriends(userId:api.currentUser.Id)
-            let friendUserFriends = api.getUserFriends(userId:newFriend!.Id)
-            currentUserFriends?.FriendsIds.append(newFriend!.Id)
-            friendUserFriends?.FriendsIds.append(api.currentUser.Id)
             
-            let updateUserFriendsResponseCode = api.updateUserFriends(newUserFriends: currentUserFriends!)
-            let updateFriendFriendsResponseCode = api.updateUserFriends(newUserFriends: friendUserFriends!)
+            let newUserStatistic = Statistic()
+            let newUserRelationship = Relationship(firstUserId: api.currentUser.Id, secondUserId: newFriend!.Id, statisticsID: newUserStatistic.id)
+            let newFriendStatistic = Statistic()
+            let newFriendRelationship = Relationship(firstUserId: newFriend!.Id, secondUserId: api.currentUser.Id, statisticsID: newFriendStatistic.id)
             
-            if 200...299 ~= updateUserFriendsResponseCode || 200...299 ~= updateFriendFriendsResponseCode{
+            if uploadStatistic(newStatistic: newUserStatistic)
+                && uploadRelationship(newRelationship: newUserRelationship)
+                && uploadStatistic(newStatistic: newFriendStatistic)
+                && uploadRelationship(newRelationship: newFriendRelationship){
                 WorkspaceHelper.performSegue(parentController: self, segueIdentifier: "unwindToAddFriendSegue")
             }
         case 400...499:
             AlertHelper.showAlertMessage(title: "Error", message: "User not found")
         default:
             AlertHelper.showAlertMessage(title: "Error", message: "WTF???")
+        }
+        
+        func uploadRelationship(newRelationship: Relationship) -> Bool{
+            let URResponseCode = api.addRelationship(newRelationship: newRelationship)
+            
+            switch URResponseCode{
+            case 200...299:
+                return true
+            default:
+                AlertHelper.showAlertMessage(title: "Error", message: "at uploadRelationship, response code = \(URResponseCode)")
+                return false
+            }
+        }
+        
+        func uploadStatistic(newStatistic: Statistic) -> Bool{
+            let USResponse = api.addStatistic(newStatisticModel: StatisticModel(statistic: newStatistic))
+            switch USResponse{
+            case 200...299:
+                return true
+            default:
+                AlertHelper.showAlertMessage(title: "Error", message: "at uploadStatistics, response code = \(USResponse)")
+                return false
+            }
         }
     }
     

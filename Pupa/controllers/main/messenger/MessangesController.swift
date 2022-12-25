@@ -11,7 +11,7 @@ class MessangesController: UITableViewController {
         super.viewDidLoad()
         
         //get all user chats
-        chats = api.getAllUserChats()
+        //chats = api.getAllUserChats()!
         
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         

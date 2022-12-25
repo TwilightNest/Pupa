@@ -32,6 +32,15 @@ class User : Codable {
         self.Password = (jsonDictionary["password"] as? String)!
     }
     
+    init(data: Data){
+        var tmpUser = try? JSONDecoder().decode(User.self,from:data)
+        self.Id = tmpUser!.Id
+        self.Login = tmpUser!.Login
+        self.Email = tmpUser!.Email
+        self.PhoneNumber = tmpUser!.PhoneNumber
+        self.Password = tmpUser!.Password
+    }
+    
     func toJson() -> Any {
         let jsonEncoder = JSONEncoder()
         let jsonData = try! jsonEncoder.encode(self)

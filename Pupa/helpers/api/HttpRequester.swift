@@ -13,7 +13,7 @@ class HttpRequester {
             
             responseStatusCode = (response as? HTTPURLResponse)!.statusCode
             
-            responseJson = try! (JSONSerialization.jsonObject(with: responseData!, options: .allowFragments))
+            responseJson = try? (JSONSerialization.jsonObject(with: responseData!, options: .allowFragments))
             
             semaphore.signal()
         }

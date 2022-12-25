@@ -16,7 +16,7 @@ class ProfileController: UIViewController {
     
     @IBAction func logOutButtonClick() {
         UserDefaults.standard.removeObject(forKey: "CurrentUser")
+        map.deinitLocationManager()
         view.window?.rootViewController = WorkspaceHelper.switchStoryboard(sbName: "Auth", controllerName: "Auth")
     }
-    
 }

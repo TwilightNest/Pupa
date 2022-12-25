@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		ED1DE90C2954A36C00841C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE90B2954A36C00841C0D /* AppDelegate.swift */; };
 		ED1DE90E2954A36C00841C0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE90D2954A36C00841C0D /* SceneDelegate.swift */; };
-		ED1DE9102954A36C00841C0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE90F2954A36C00841C0D /* ViewController.swift */; };
 		ED1DE9132954A36C00841C0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1DE9112954A36C00841C0D /* Main.storyboard */; };
 		ED1DE9162954A36C00841C0D /* Pupa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9142954A36C00841C0D /* Pupa.xcdatamodeld */; };
 		ED1DE9182954A36F00841C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1DE9172954A36F00841C0D /* Assets.xcassets */; };
@@ -17,8 +16,6 @@
 		ED1DE9262954AA9C00841C0D /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1DE9252954AA9C00841C0D /* Auth.storyboard */; };
 		ED1DE9292954AB0700841C0D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9282954AB0700841C0D /* Extensions.swift */; };
 		ED1DE92E2954AB9A00841C0D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE92D2954AB9A00841C0D /* User.swift */; };
-		ED1DE9302954ABC000841C0D /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE92F2954ABC000841C0D /* UserLocation.swift */; };
-		ED1DE9322954ABCF00841C0D /* UserFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9312954ABCE00841C0D /* UserFriends.swift */; };
 		ED1DE9362954AC8B00841C0D /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9352954AC8B00841C0D /* AuthController.swift */; };
 		ED1DE9382954ACA300841C0D /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9372954ACA300841C0D /* RegisterController.swift */; };
 		ED1DE93D2954AE3100841C0D /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE93C2954AE3100841C0D /* MapController.swift */; };
@@ -37,6 +34,11 @@
 		ED67DE44295779E700AC25D6 /* InboxParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67DE43295779E700AC25D6 /* InboxParticipant.swift */; };
 		ED67DE4729577A8B00AC25D6 /* Inbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67DE4629577A8B00AC25D6 /* Inbox.swift */; };
 		ED67DE4929577ADC00AC25D6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67DE4829577ADC00AC25D6 /* Message.swift */; };
+		ED6864D22958B95C00DBEEC9 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6864D12958B95C00DBEEC9 /* StatisticModel.swift */; };
+		ED6864D42958D27D00DBEEC9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6864D32958D27D00DBEEC9 /* Location.swift */; };
+		ED9E7E6E2957CBFC00D47A7B /* RelationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E7E6D2957CBFC00D47A7B /* RelationType.swift */; };
+		ED9E7E702957F04A00D47A7B /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E7E6F2957F04A00D47A7B /* Relationship.swift */; };
+		ED9E7E722957F0A200D47A7B /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E7E712957F0A200D47A7B /* Statistic.swift */; };
 		F3ABCCC48E378A44E0AAC336 /* Pods_Pupa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9021F5CE142657508BE781 /* Pods_Pupa.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +49,6 @@
 		ED1DE9082954A36C00841C0D /* Pupa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pupa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1DE90B2954A36C00841C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED1DE90D2954A36C00841C0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED1DE90F2954A36C00841C0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED1DE9152954A36C00841C0D /* Pupa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pupa.xcdatamodel; sourceTree = "<group>"; };
 		ED1DE9172954A36F00841C0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED1DE91C2954A36F00841C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,8 +57,6 @@
 		ED1DE9252954AA9C00841C0D /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		ED1DE9282954AB0700841C0D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		ED1DE92D2954AB9A00841C0D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		ED1DE92F2954ABC000841C0D /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
-		ED1DE9312954ABCE00841C0D /* UserFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriends.swift; sourceTree = "<group>"; };
 		ED1DE9352954AC8B00841C0D /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		ED1DE9372954ACA300841C0D /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		ED1DE93C2954AE3100841C0D /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -76,6 +75,11 @@
 		ED67DE43295779E700AC25D6 /* InboxParticipant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxParticipant.swift; sourceTree = "<group>"; };
 		ED67DE4629577A8B00AC25D6 /* Inbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inbox.swift; sourceTree = "<group>"; };
 		ED67DE4829577ADC00AC25D6 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		ED6864D12958B95C00DBEEC9 /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
+		ED6864D32958D27D00DBEEC9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		ED9E7E6D2957CBFC00D47A7B /* RelationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationType.swift; sourceTree = "<group>"; };
+		ED9E7E6F2957F04A00D47A7B /* Relationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
+		ED9E7E712957F0A200D47A7B /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +139,6 @@
 				ED1DE9272954AAE600841C0D /* extensions */,
 				ED1DE90B2954A36C00841C0D /* AppDelegate.swift */,
 				ED1DE90D2954A36C00841C0D /* SceneDelegate.swift */,
-				ED1DE90F2954A36C00841C0D /* ViewController.swift */,
 				ED1DE9172954A36F00841C0D /* Assets.xcassets */,
 				ED1DE91C2954A36F00841C0D /* Info.plist */,
 				ED1DE9142954A36C00841C0D /* Pupa.xcdatamodeld */,
@@ -164,6 +167,7 @@
 		ED1DE92A2954AB4000841C0D /* models */ = {
 			isa = PBXGroup;
 			children = (
+				ED9E7E6C2957CBDD00D47A7B /* enum */,
 				ED67DE4529577A4F00AC25D6 /* database */,
 				ED67DE412957795C00AC25D6 /* messenger */,
 			);
@@ -281,14 +285,32 @@
 		ED67DE4529577A4F00AC25D6 /* database */ = {
 			isa = PBXGroup;
 			children = (
+				ED6864D02958B93F00DBEEC9 /* helpers */,
 				ED1DE92D2954AB9A00841C0D /* User.swift */,
-				ED1DE92F2954ABC000841C0D /* UserLocation.swift */,
-				ED1DE9312954ABCE00841C0D /* UserFriends.swift */,
 				ED67DE43295779E700AC25D6 /* InboxParticipant.swift */,
 				ED67DE4629577A8B00AC25D6 /* Inbox.swift */,
 				ED67DE4829577ADC00AC25D6 /* Message.swift */,
+				ED9E7E6F2957F04A00D47A7B /* Relationship.swift */,
+				ED9E7E712957F0A200D47A7B /* Statistic.swift */,
+				ED6864D32958D27D00DBEEC9 /* Location.swift */,
 			);
 			path = database;
+			sourceTree = "<group>";
+		};
+		ED6864D02958B93F00DBEEC9 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ED6864D12958B95C00DBEEC9 /* StatisticModel.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		ED9E7E6C2957CBDD00D47A7B /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				ED9E7E6D2957CBFC00D47A7B /* RelationType.swift */,
+			);
+			path = enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,21 +428,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9E7E6E2957CBFC00D47A7B /* RelationType.swift in Sources */,
+				ED9E7E702957F04A00D47A7B /* Relationship.swift in Sources */,
 				ED1DE9382954ACA300841C0D /* RegisterController.swift in Sources */,
 				ED1DE9292954AB0700841C0D /* Extensions.swift in Sources */,
 				ED67DE3C29574FAA00AC25D6 /* ChatViewController.swift in Sources */,
 				ED1DE9482954B0D900841C0D /* ApiProcessor.swift in Sources */,
+				ED6864D42958D27D00DBEEC9 /* Location.swift in Sources */,
 				ED1DE94E2954B19000841C0D /* WorkspaceHelper.swift in Sources */,
-				ED1DE9102954A36C00841C0D /* ViewController.swift in Sources */,
 				ED1DE93D2954AE3100841C0D /* MapController.swift in Sources */,
 				ED1DE92E2954AB9A00841C0D /* User.swift in Sources */,
 				ED1DE9412954AE9600841C0D /* ProfileController.swift in Sources */,
 				ED1DE90C2954A36C00841C0D /* AppDelegate.swift in Sources */,
 				ED1DE9522954B20600841C0D /* MapboxMapHelper.swift in Sources */,
 				ED1DE9362954AC8B00841C0D /* AuthController.swift in Sources */,
+				ED9E7E722957F0A200D47A7B /* Statistic.swift in Sources */,
 				ED67DE44295779E700AC25D6 /* InboxParticipant.swift in Sources */,
+				ED6864D22958B95C00DBEEC9 /* StatisticModel.swift in Sources */,
 				ED1DE90E2954A36C00841C0D /* SceneDelegate.swift in Sources */,
-				ED1DE9302954ABC000841C0D /* UserLocation.swift in Sources */,
 				ED1DE93F2954AE7200841C0D /* MessangesController.swift in Sources */,
 				ED67DE402957609900AC25D6 /* MKSender.swift in Sources */,
 				ED1DE94C2954B12000841C0D /* AlertHelper.swift in Sources */,
@@ -428,7 +453,6 @@
 				ED67DE4929577ADC00AC25D6 /* Message.swift in Sources */,
 				ED67DE3E29575D1800AC25D6 /* MKMessage.swift in Sources */,
 				ED1DE9432954AEC500841C0D /* AddFriendController.swift in Sources */,
-				ED1DE9322954ABCF00841C0D /* UserFriends.swift in Sources */,
 				ED1DE94A2954B0FB00841C0D /* HttpRequester.swift in Sources */,
 				ED1DE9502954B1B000841C0D /* LocationManager.swift in Sources */,
 				ED1DE9162954A36C00841C0D /* Pupa.xcdatamodeld in Sources */,
