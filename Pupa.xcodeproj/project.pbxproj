@@ -19,7 +19,7 @@
 		ED1DE9362954AC8B00841C0D /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9352954AC8B00841C0D /* AuthController.swift */; };
 		ED1DE9382954ACA300841C0D /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9372954ACA300841C0D /* RegisterController.swift */; };
 		ED1DE93D2954AE3100841C0D /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE93C2954AE3100841C0D /* MapController.swift */; };
-		ED1DE93F2954AE7200841C0D /* MessangesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE93E2954AE7200841C0D /* MessangesController.swift */; };
+		ED1DE93F2954AE7200841C0D /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE93E2954AE7200841C0D /* MessagesController.swift */; };
 		ED1DE9412954AE9600841C0D /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9402954AE9600841C0D /* ProfileController.swift */; };
 		ED1DE9432954AEC500841C0D /* AddFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9422954AEC500841C0D /* AddFriendController.swift */; };
 		ED1DE9482954B0D900841C0D /* ApiProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9472954B0D900841C0D /* ApiProcessor.swift */; };
@@ -28,17 +28,18 @@
 		ED1DE94E2954B19000841C0D /* WorkspaceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE94D2954B19000841C0D /* WorkspaceHelper.swift */; };
 		ED1DE9502954B1B000841C0D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE94F2954B1B000841C0D /* LocationManager.swift */; };
 		ED1DE9522954B20600841C0D /* MapboxMapHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9512954B20600841C0D /* MapboxMapHelper.swift */; };
+		ED6783C4295A1CE700054A93 /* UsersChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6783C3295A1CE700054A93 /* UsersChat.swift */; };
 		ED67DE3C29574FAA00AC25D6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67DE3B29574FAA00AC25D6 /* ChatViewController.swift */; };
 		ED67DE3E29575D1800AC25D6 /* MKMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67DE3D29575D1800AC25D6 /* MKMessage.swift */; };
 		ED67DE402957609900AC25D6 /* MKSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67DE3F2957609900AC25D6 /* MKSender.swift */; };
-		ED67DE44295779E700AC25D6 /* InboxParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67DE43295779E700AC25D6 /* InboxParticipant.swift */; };
-		ED67DE4729577A8B00AC25D6 /* Inbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67DE4629577A8B00AC25D6 /* Inbox.swift */; };
 		ED67DE4929577ADC00AC25D6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67DE4829577ADC00AC25D6 /* Message.swift */; };
 		ED6864D22958B95C00DBEEC9 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6864D12958B95C00DBEEC9 /* StatisticModel.swift */; };
 		ED6864D42958D27D00DBEEC9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6864D32958D27D00DBEEC9 /* Location.swift */; };
 		ED9E7E6E2957CBFC00D47A7B /* RelationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E7E6D2957CBFC00D47A7B /* RelationType.swift */; };
 		ED9E7E702957F04A00D47A7B /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E7E6F2957F04A00D47A7B /* Relationship.swift */; };
 		ED9E7E722957F0A200D47A7B /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E7E712957F0A200D47A7B /* Statistic.swift */; };
+		EDCEE87B2959346F00873431 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCEE87A2959346F00873431 /* Chat.swift */; };
+		EDCEE87D295939CE00873431 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCEE87C295939CE00873431 /* ChatModel.swift */; };
 		F3ABCCC48E378A44E0AAC336 /* Pods_Pupa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9021F5CE142657508BE781 /* Pods_Pupa.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +61,7 @@
 		ED1DE9352954AC8B00841C0D /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		ED1DE9372954ACA300841C0D /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		ED1DE93C2954AE3100841C0D /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
-		ED1DE93E2954AE7200841C0D /* MessangesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangesController.swift; sourceTree = "<group>"; };
+		ED1DE93E2954AE7200841C0D /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
 		ED1DE9402954AE9600841C0D /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		ED1DE9422954AEC500841C0D /* AddFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendController.swift; sourceTree = "<group>"; };
 		ED1DE9472954B0D900841C0D /* ApiProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProcessor.swift; sourceTree = "<group>"; };
@@ -69,17 +70,18 @@
 		ED1DE94D2954B19000841C0D /* WorkspaceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceHelper.swift; sourceTree = "<group>"; };
 		ED1DE94F2954B1B000841C0D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		ED1DE9512954B20600841C0D /* MapboxMapHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxMapHelper.swift; sourceTree = "<group>"; };
+		ED6783C3295A1CE700054A93 /* UsersChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersChat.swift; sourceTree = "<group>"; };
 		ED67DE3B29574FAA00AC25D6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ED67DE3D29575D1800AC25D6 /* MKMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMessage.swift; sourceTree = "<group>"; };
 		ED67DE3F2957609900AC25D6 /* MKSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKSender.swift; sourceTree = "<group>"; };
-		ED67DE43295779E700AC25D6 /* InboxParticipant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxParticipant.swift; sourceTree = "<group>"; };
-		ED67DE4629577A8B00AC25D6 /* Inbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inbox.swift; sourceTree = "<group>"; };
 		ED67DE4829577ADC00AC25D6 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED6864D12958B95C00DBEEC9 /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		ED6864D32958D27D00DBEEC9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		ED9E7E6D2957CBFC00D47A7B /* RelationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationType.swift; sourceTree = "<group>"; };
 		ED9E7E6F2957F04A00D47A7B /* Relationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
 		ED9E7E712957F0A200D47A7B /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
+		EDCEE87A2959346F00873431 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		EDCEE87C295939CE00873431 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,7 +225,7 @@
 		ED1DE93A2954ADEB00841C0D /* messenger */ = {
 			isa = PBXGroup;
 			children = (
-				ED1DE93E2954AE7200841C0D /* MessangesController.swift */,
+				ED1DE93E2954AE7200841C0D /* MessagesController.swift */,
 				ED67DE3B29574FAA00AC25D6 /* ChatViewController.swift */,
 			);
 			path = messenger;
@@ -287,12 +289,12 @@
 			children = (
 				ED6864D02958B93F00DBEEC9 /* helpers */,
 				ED1DE92D2954AB9A00841C0D /* User.swift */,
-				ED67DE43295779E700AC25D6 /* InboxParticipant.swift */,
-				ED67DE4629577A8B00AC25D6 /* Inbox.swift */,
 				ED67DE4829577ADC00AC25D6 /* Message.swift */,
 				ED9E7E6F2957F04A00D47A7B /* Relationship.swift */,
 				ED9E7E712957F0A200D47A7B /* Statistic.swift */,
 				ED6864D32958D27D00DBEEC9 /* Location.swift */,
+				EDCEE87A2959346F00873431 /* Chat.swift */,
+				ED6783C3295A1CE700054A93 /* UsersChat.swift */,
 			);
 			path = database;
 			sourceTree = "<group>";
@@ -301,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				ED6864D12958B95C00DBEEC9 /* StatisticModel.swift */,
+				EDCEE87C295939CE00873431 /* ChatModel.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				ED9E7E6E2957CBFC00D47A7B /* RelationType.swift in Sources */,
 				ED9E7E702957F04A00D47A7B /* Relationship.swift in Sources */,
 				ED1DE9382954ACA300841C0D /* RegisterController.swift in Sources */,
+				EDCEE87D295939CE00873431 /* ChatModel.swift in Sources */,
 				ED1DE9292954AB0700841C0D /* Extensions.swift in Sources */,
 				ED67DE3C29574FAA00AC25D6 /* ChatViewController.swift in Sources */,
 				ED1DE9482954B0D900841C0D /* ApiProcessor.swift in Sources */,
@@ -443,15 +447,15 @@
 				ED1DE9522954B20600841C0D /* MapboxMapHelper.swift in Sources */,
 				ED1DE9362954AC8B00841C0D /* AuthController.swift in Sources */,
 				ED9E7E722957F0A200D47A7B /* Statistic.swift in Sources */,
-				ED67DE44295779E700AC25D6 /* InboxParticipant.swift in Sources */,
 				ED6864D22958B95C00DBEEC9 /* StatisticModel.swift in Sources */,
 				ED1DE90E2954A36C00841C0D /* SceneDelegate.swift in Sources */,
-				ED1DE93F2954AE7200841C0D /* MessangesController.swift in Sources */,
+				ED1DE93F2954AE7200841C0D /* MessagesController.swift in Sources */,
+				ED6783C4295A1CE700054A93 /* UsersChat.swift in Sources */,
 				ED67DE402957609900AC25D6 /* MKSender.swift in Sources */,
 				ED1DE94C2954B12000841C0D /* AlertHelper.swift in Sources */,
-				ED67DE4729577A8B00AC25D6 /* Inbox.swift in Sources */,
 				ED67DE4929577ADC00AC25D6 /* Message.swift in Sources */,
 				ED67DE3E29575D1800AC25D6 /* MKMessage.swift in Sources */,
+				EDCEE87B2959346F00873431 /* Chat.swift in Sources */,
 				ED1DE9432954AEC500841C0D /* AddFriendController.swift in Sources */,
 				ED1DE94A2954B0FB00841C0D /* HttpRequester.swift in Sources */,
 				ED1DE9502954B1B000841C0D /* LocationManager.swift in Sources */,

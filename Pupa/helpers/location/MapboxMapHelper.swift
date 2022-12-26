@@ -31,7 +31,7 @@ public class MapboxMapHelper: LocationPermissionsDelegate {
         
         if userRelationships != nil {
             userRelationships?.forEach({ relationship in
-                let friendLocation = api.getUserLocation(userId: relationship.secondUserId)
+                let friendLocation = api.getUserLocation(userId: relationship.friendId)
                 
                 // Create the circle annotation.
                 var circleAnnotation = CircleAnnotation(centerCoordinate: friendLocation!.toCLLocation())

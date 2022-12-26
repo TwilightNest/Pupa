@@ -19,15 +19,10 @@ class AddFriendController: UIViewController {
                 return
             }
             
-            let newUserStatistic = Statistic()
-            let newUserRelationship = Relationship(firstUserId: api.currentUser.Id, secondUserId: newFriend!.Id, statisticsID: newUserStatistic.id)
-            let newFriendStatistic = Statistic()
-            let newFriendRelationship = Relationship(firstUserId: newFriend!.Id, secondUserId: api.currentUser.Id, statisticsID: newFriendStatistic.id)
+            let newUserRelationship = Relationship(userId: api.currentUser.Id, friendId: newFriend!.Id, statisticsID: UUID())
+            let newFriendRelationship = Relationship(userId: newFriend!.Id, friendId: api.currentUser.Id, statisticsID: UUID())
             
-            if uploadStatistic(newStatistic: newUserStatistic)
-                && uploadRelationship(newRelationship: newUserRelationship)
-                && uploadStatistic(newStatistic: newFriendStatistic)
-                && uploadRelationship(newRelationship: newFriendRelationship){
+            if uploadRelationship(newRelationship: newUserRelationship) && uploadRelationship(newRelationship: newFriendRelationship){
                 WorkspaceHelper.performSegue(parentController: self, segueIdentifier: "unwindToAddFriendSegue")
             }
         case 400...499:

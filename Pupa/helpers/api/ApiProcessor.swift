@@ -9,7 +9,9 @@ class ApiProcessor {
     let relationshipUrl: String = "/Relationships"
     let statisticsUrl: String = "/Statistics"
     
-    let inboxPaticipantsUrl: String = "/InboxPaticipants"
+    let chatsUrl: String = "/Chats"
+    let usersChatsUrl: String = "/UsersChats"
+    let messagesUrl: String = "/Messages"
     
     var currentUser: User!
     
@@ -76,8 +78,8 @@ class ApiProcessor {
             var userRelationships = [Relationship]()
             userRelationshipsDictionary.forEach({ relationship in
                 userRelationships.append(Relationship(
-                    firstUserId: UUID(uuidString:relationship["firstUserId"] as! String)!,
-                    secondUserId: UUID(uuidString:relationship["secondUserId"] as! String)!,
+                    userId: UUID(uuidString:relationship["userId"] as! String)!,
+                    friendId: UUID(uuidString:relationship["friendId"] as! String)!,
                     statisticsID: UUID(uuidString:relationship["statisticsId"] as! String)!
                     ))
             })
@@ -123,18 +125,52 @@ class ApiProcessor {
         return responseCode
     }
     
-    func getAllUserChats(userId: UUID) -> [Inbox]? {
-        let response = HttpRequester.sendSyncGetRequest(urlValue: baseUrl + inboxPaticipantsUrl, parametr: userId.uuidString)
+    func getUserChats(userId: UUID) -> [Chat]? {
+        let response = HttpRequester.sendSyncGetRequest(urlValue: baseUrl + usersChatsUrl, parametr: "user=" + userId.uuidString)
         
         let responseCode = response.0
-        _ = response.1
+        let responseJson = response.1
         
         switch responseCode {
         case 200...299:
-            return nil
+            let userChatsDictionary = responseJson as! [[String : Any]]
+            var userChats = [Chat]()
+            userChatsDictionary.forEach({ chat in
+                userChats.append(Chat(
+                    id: UUID(uuidString:chat["id"] as! String)!,
+                    lastMessage: chat["lastMessage"] as! String,
+                    lastSenderUserId: UUID(uuidString:chat["lastSenderUserId"] as! String)!
+                    ))
+            })
+            return userChats
         default:
-            AlertHelper.showAlertMessage(title: "Error", message: "at getUserFriends, response code = \(responseCode)")
+            AlertHelper.showAlertMessage(title: "Error", message: "at getAllUserChats, response code = \(responseCode)")
             return nil
         }
+    }
+    
+    func getChatUsers(chatId: UUID) -> [User]? {
+        let response = HttpRequester.sendSyncGetRequest(urlValue: baseUrl + usersChatsUrl, parametr: "chat=" + chatId.uuidString)
+        
+        let responseCode = response.0
+        let responseJson = response.1
+        
+        switch responseCode {
+        case 200...299:
+            let chatUsersDictionary = responseJson as! [[String : Any]]
+            var chatUsers = [User]()
+            chatUsersDictionary.forEach({ user in
+                chatUsers.append(User(json: user))
+            })
+            return chatUsers
+        default:
+            AlertHelper.showAlertMessage(title: "Error", message: "at getAllUserChats, response code = \(responseCode)")
+            return nil
+        }
+    }
+    
+    func addChat(newChatModel: ChatModel) -> Int {
+        let responseCode = HttpRequester.sendSyncPostRequest(urlValue: baseUrl + chatsUrl, dataToPost: newChatModel.toData())
+        return responseCode
     }
 }
