@@ -1,9 +1,6 @@
 import UIKit
 
 class AuthController: UIViewController {
-    
-    var api = ApiProcessor()
-    
     @IBOutlet var loginTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
@@ -17,6 +14,7 @@ class AuthController: UIViewController {
             switch response.0 {
             case 200...299:
                 if passwordTextField.text! == response.1?.Password{
+                    //update UserDefaults
                     do {
                         let data = try JSONEncoder().encode(response.1)
                         UserDefaults.standard.set(data,forKey: "CurrentUser")
@@ -25,7 +23,8 @@ class AuthController: UIViewController {
                         print(error)
                         return
                     }
-                    
+                    //update api
+                    api.updateCurrentUser()
                     view.window?.rootViewController = WorkspaceHelper.switchStoryboard(sbName: "Main", controllerName: "Main")
                 } else {
                     AlertHelper.showAlertMessage(title: "Error", message: "Wrong password")

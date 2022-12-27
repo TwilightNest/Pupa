@@ -1,9 +1,6 @@
 import UIKit
 
 class RegisterController: UIViewController {
-    
-    let api: ApiProcessor = ApiProcessor()
-    
     @IBOutlet var loginTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var phoneNumberTextField: UITextField!

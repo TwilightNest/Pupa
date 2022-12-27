@@ -4,7 +4,6 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
 
     var locationManager: CLLocationManager!
     var map: MapboxMapHelper!
-    var api = ApiProcessor()
     
     func initLocationManager(mapboxMapHelper: MapboxMapHelper) {
         map = mapboxMapHelper
@@ -24,7 +23,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let newUserLocation = Location(objectId: api.currentUser.Id, latitude: locations.last!.coordinate.latitude, longitude: locations.last!.coordinate.longitude)
+        let newUserLocation = Location(objectId: api.currentUser!.Id, latitude: locations.last!.coordinate.latitude, longitude: locations.last!.coordinate.longitude)
         
         let responseCode = api.updateUserLocation(newLocation: newUserLocation)
         

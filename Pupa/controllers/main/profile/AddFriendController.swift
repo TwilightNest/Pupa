@@ -1,8 +1,6 @@
 import UIKit
 
 class AddFriendController: UIViewController {
-    
-    let api = ApiProcessor()
     @IBOutlet var friendDataTextField: UITextField!
 
     
@@ -14,13 +12,13 @@ class AddFriendController: UIViewController {
         
         switch responseCode{
         case 200...299:
-            if api.currentUser.Id == newFriend!.Id{
+            if api.currentUser!.Id == newFriend!.Id{
                 AlertHelper.showAlertMessage(title: "Error", message: "You can't add yourself as friend")
                 return
             }
             
-            let newUserRelationship = Relationship(userId: api.currentUser.Id, friendId: newFriend!.Id, statisticsID: UUID())
-            let newFriendRelationship = Relationship(userId: newFriend!.Id, friendId: api.currentUser.Id, statisticsID: UUID())
+            let newUserRelationship = Relationship(userId: api.currentUser!.Id, friendId: newFriend!.Id, statisticsID: UUID())
+            let newFriendRelationship = Relationship(userId: newFriend!.Id, friendId: api.currentUser!.Id, statisticsID: UUID())
             
             if uploadRelationship(newRelationship: newUserRelationship) && uploadRelationship(newRelationship: newFriendRelationship){
                 WorkspaceHelper.performSegue(parentController: self, segueIdentifier: "unwindToAddFriendSegue")
@@ -44,7 +42,7 @@ class AddFriendController: UIViewController {
         }
         
         func uploadStatistic(newStatistic: Statistic) -> Bool{
-            let USResponse = api.addStatistic(newStatisticModel: StatisticModel(statistic: newStatistic))
+            let USResponse = api.addStatistic(newStatistic: newStatistic)
             switch USResponse{
             case 200...299:
                 return true

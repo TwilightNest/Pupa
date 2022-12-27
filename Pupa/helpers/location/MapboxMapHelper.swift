@@ -5,8 +5,8 @@ public class MapboxMapHelper: LocationPermissionsDelegate {
 
     var mapView: MapView!
     var lm = LocationManager()
-    var api = ApiProcessor()
     var annotationManager: CircleAnnotationManager!
+    var updateFriendsTimer = Timer()
     var friends: [CircleAnnotation]!
     
     func setupMapboxMapHelper(mapView: MapView){
@@ -20,17 +20,20 @@ public class MapboxMapHelper: LocationPermissionsDelegate {
     
     func initLocationManager(){
         lm.initLocationManager(mapboxMapHelper: self)
+        //update friends once at 10 seconds
+        updateFriendsTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(updateFriendsLocation), userInfo: nil, repeats: true)
     }
     
     func deinitLocationManager(){
         lm.deinitLocationManager()
+        updateFriendsTimer.invalidate()
     }
     
-    func updateFriendsLocation() {
-        let userRelationships = api.getUserRelationships(userId: api.currentUser.Id)
+    @objc func updateFriendsLocation() {
+        let userRelationships = api.getUserRelationships(userId: api.currentUser!.Id)
         
         if userRelationships != nil {
-            userRelationships?.forEach({ relationship in
+            userRelationships!.forEach({ relationship in
                 let friendLocation = api.getUserLocation(userId: relationship.friendId)
                 
                 // Create the circle annotation.
@@ -51,7 +54,7 @@ public class MapboxMapHelper: LocationPermissionsDelegate {
     }
     
     func moveCameraToUser(){
-        let userLocation = api.getUserLocation(userId: api.currentUser.Id)
+        let userLocation = api.getUserLocation(userId: api.currentUser!.Id)
         let CameraOptions = CameraOptions(center: userLocation!.toCLLocation(), zoom: 12, pitch: 40)
         mapView.camera.fly(to: CameraOptions, duration: 1.5)
     }

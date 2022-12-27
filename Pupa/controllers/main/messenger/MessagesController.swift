@@ -3,7 +3,6 @@ import UIKit
 class MessagesController: UITableViewController {
     
     @IBOutlet var chatsTableView: UITableView!
-    let api = ApiProcessor()
     
     var userChats = [Chat]()
     
@@ -27,7 +26,7 @@ class MessagesController: UITableViewController {
         let cell = chatsTableView.dequeueReusableCell(withIdentifier: "chat", for: indexPath)
         var chatUsers = api.getChatUsers(chatId: userChats[indexPath.row].id)
         chatUsers?.removeAll(where: { user in
-            user.Id == api.currentUser.Id
+            user.Id == api.currentUser!.Id
         })
         let friendName = chatUsers?.first?.Login
         cell.textLabel?.text = friendName
@@ -36,14 +35,15 @@ class MessagesController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //show chat
         let vc = ChatViewController()
+        vc.chatId = userChats[indexPath.row].id
         vc.title = "Chat"
         navigationController?.pushViewController(vc, animated: true)
     }
     
     func addNewChat() {
         let newChatModel = ChatModel()
-        newChatModel.firstUserId = api.currentUser.Id
-        newChatModel.secondUserId = api.getUserRelationships(userId: api.currentUser.Id)![0].friendId
+        newChatModel.firstUserId = api.currentUser!.Id
+        newChatModel.secondUserId = api.getUserRelationships(userId: api.currentUser!.Id)![0].friendId
         let responseCode = api.addChat(newChatModel: newChatModel)
         switch responseCode {
         case 200...299:
@@ -54,7 +54,7 @@ class MessagesController: UITableViewController {
     }
     
     func updateChats() {
-        userChats = api.getUserChats(userId: api.currentUser.Id)!
+        userChats = api.getUserChats(userId: api.currentUser!.Id)!
         chatsTableView.reloadData()
     }
 }

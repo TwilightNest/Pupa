@@ -1,26 +1,25 @@
 import Foundation
 
-class Message: Codable{
+class MessageModel: Codable{
     var chatId : UUID
     var senderUserId: UUID
     var messageBody: String
-    var created: Date
+    var created: String
     
-    init() {
-        self.chatId = UUID()
-        self.senderUserId = UUID()
-        self.messageBody = ""
-        self.created = Date()
+    init(chatId: UUID, senderUserId: UUID, messageBody: String, created: String) {
+        self.chatId = chatId
+        self.senderUserId = senderUserId
+        self.messageBody = messageBody
+        self.created = created
     }
     
-    init(messageModel: MessageModel) {
-        self.chatId = messageModel.chatId
-        self.senderUserId = messageModel.senderUserId
-        self.messageBody = messageModel.messageBody
-        let formaatter = DateFormatter()
-        formaatter.locale = Locale(identifier: "en_US_POSIX")
-        formaatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-        self.created = formaatter.date(from: messageModel.created)!
+    init(message: Message) {
+        self.chatId = message.chatId
+        self.senderUserId = message.senderUserId
+        self.messageBody = message.messageBody
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        self.created = formatter.string(from: message.created)
     }
     
     init(json: Any) {
@@ -28,8 +27,7 @@ class Message: Codable{
         self.chatId = UUID(uuidString:jsonDictionary["chatId"] as! String)!
         self.senderUserId = UUID(uuidString:jsonDictionary["senderUserId"] as! String)!
         self.messageBody = (jsonDictionary["messageBody"] as! String?)!
-        let dateString = (jsonDictionary["created"] as? String)!
-        self.created = DateFormatter().date(from: dateString)!
+        self.created = (jsonDictionary["created"] as? String)!
     }
     
     func toJson() -> Any {

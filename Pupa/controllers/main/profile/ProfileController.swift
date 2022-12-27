@@ -3,11 +3,10 @@ import UIKit
 class ProfileController: UIViewController {
 
     @IBOutlet var userNameLabel: UILabel!
-    var api = ApiProcessor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = api.currentUser.Login
+        userNameLabel.text = api.currentUser?.Login
     }
     
     @IBAction func unwindToAddFriend(segue: UIStoryboardSegue){
@@ -16,6 +15,7 @@ class ProfileController: UIViewController {
     
     @IBAction func logOutButtonClick() {
         UserDefaults.standard.removeObject(forKey: "CurrentUser")
+        api.currentUser = nil
         map.deinitLocationManager()
         view.window?.rootViewController = WorkspaceHelper.switchStoryboard(sbName: "Auth", controllerName: "Auth")
     }

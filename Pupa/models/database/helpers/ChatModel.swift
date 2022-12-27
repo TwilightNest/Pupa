@@ -9,7 +9,7 @@ class ChatModel: Codable{
     
     init(){
         id = UUID.init(uuidString: "00000000-0000-0000-0000-000000000000")!
-        lastMessage = "test"
+        lastMessage = ""
         lastSenderUserId = UUID.init(uuidString: "00000000-0000-0000-0000-000000000000")!
         firstUserId = UUID.init(uuidString: "00000000-0000-0000-0000-000000000000")!
         secondUserId = UUID.init(uuidString: "00000000-0000-0000-0000-000000000000")!

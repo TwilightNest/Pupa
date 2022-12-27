@@ -1,6 +1,6 @@
 import Foundation
 
-class ApiProcessor {
+public class ApiProcessor {
     let baseUrl: String = "http://185.152.139.127"
     let usersUrl: String = "/Users"
     
@@ -13,9 +13,13 @@ class ApiProcessor {
     let usersChatsUrl: String = "/UsersChats"
     let messagesUrl: String = "/Messages"
     
-    var currentUser: User!
+    var currentUser: User?
     
     init(){
+        updateCurrentUser()
+    }
+    
+    func updateCurrentUser(){
         do {
             let data = UserDefaults.standard.data(forKey:"CurrentUser")
             if data != nil{
@@ -115,13 +119,15 @@ class ApiProcessor {
         }
     }
     
-    func addStatistic(newStatisticModel: StatisticModel) -> Int {
-        let responseCode = HttpRequester.sendSyncPostRequest(urlValue: baseUrl + statisticsUrl, dataToPost: newStatisticModel.toData())
+    func addStatistic(newStatistic: Statistic) -> Int {
+        let model = StatisticModel(statistic: newStatistic)
+        let responseCode = HttpRequester.sendSyncPostRequest(urlValue: baseUrl + statisticsUrl, dataToPost: model.toData())
         return responseCode
     }
     
-    func updateStatistic(newStatisticModel: StatisticModel) -> Int {
-        let responseCode = HttpRequester.sendSyncPutRequest(urlValue: baseUrl + statisticsUrl, dataToPut: newStatisticModel.toJson())
+    func updateStatistic(newStatistic: Statistic) -> Int {
+        let model = StatisticModel(statistic: newStatistic)
+        let responseCode = HttpRequester.sendSyncPutRequest(urlValue: baseUrl + statisticsUrl, dataToPut: model.toJson())
         return responseCode
     }
     
@@ -171,6 +177,33 @@ class ApiProcessor {
     
     func addChat(newChatModel: ChatModel) -> Int {
         let responseCode = HttpRequester.sendSyncPostRequest(urlValue: baseUrl + chatsUrl, dataToPost: newChatModel.toData())
+        return responseCode
+    }
+    
+    func getChatMessages(chatId: UUID) -> [Message]? {
+        let response = HttpRequester.sendSyncGetRequest(urlValue: baseUrl + messagesUrl, parametr: chatId.uuidString)
+        
+        let responseCode = response.0
+        let responseJson = response.1
+        
+        switch responseCode {
+        case 200...299:
+            let chatMessagesDictionary = responseJson as! [[String : Any]]
+            var chatMessages = [Message]()
+            chatMessagesDictionary.forEach({ message in
+                let model = MessageModel(json: message)
+                chatMessages.append(Message(messageModel: model))
+            })
+            return chatMessages
+        default:
+            AlertHelper.showAlertMessage(title: "Error", message: "at getChatMessages, response code = \(responseCode)")
+            return nil
+        }
+    }
+    
+    func addMessage(newMessage: Message) -> Int {
+        let model = MessageModel(message: newMessage)
+        let responseCode = HttpRequester.sendSyncPostRequest(urlValue: baseUrl + messagesUrl, dataToPost: model.toData())
         return responseCode
     }
 }

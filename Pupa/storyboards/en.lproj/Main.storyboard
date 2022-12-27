@@ -111,6 +111,22 @@
             </objects>
             <point key="canvasLocation" x="546" y="361"/>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="Bpd-ND-Vo1">
+            <objects>
+                <viewController id="Chv-NL-L2a" customClass="ChatViewController" customModule="Pupa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hIm-Bf-nj3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JhL-SK-Jzp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I7I-3U-xsA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAI-57-VSb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407" y="361"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="ogk-6Q-Sww">
             <objects>
