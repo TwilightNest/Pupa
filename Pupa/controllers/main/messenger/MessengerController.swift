@@ -1,6 +1,6 @@
 import UIKit
 
-class MessagesController: UITableViewController {
+class MessengerController: UITableViewController {
     
     @IBOutlet var chatsTableView: UITableView!
     
@@ -8,13 +8,15 @@ class MessagesController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateChats()
-        
         chatsTableView.delegate = self
         chatsTableView.dataSource = self
     }
     
-    @IBAction func onNewMessageButtonClick() {
+    override func viewDidAppear(_ animated: Bool) {
+        updateChats()
+    }
+    
+    @IBAction func onNewChatButtonClick() {
         addNewChat()
     }
     
@@ -24,19 +26,30 @@ class MessagesController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatsTableView.dequeueReusableCell(withIdentifier: "chat", for: indexPath)
+        
+        // get second chat user
         var chatUsers = api.getChatUsers(chatId: userChats[indexPath.row].id)
         chatUsers?.removeAll(where: { user in
             user.Id == api.currentUser!.Id
         })
+        
         let friendName = chatUsers?.first?.Login
         cell.textLabel?.text = friendName
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //show chat
+    //show chat
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ChatViewController()
         vc.chatId = userChats[indexPath.row].id
-        vc.title = "Chat"
+        
+        // get second chat user
+        var chatUsers = api.getChatUsers(chatId: userChats[indexPath.row].id)
+        chatUsers?.removeAll(where: { user in
+            user.Id == api.currentUser!.Id
+        })
+        
+        vc.title = chatUsers?.first?.Login
         navigationController?.pushViewController(vc, animated: true)
     }
     

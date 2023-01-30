@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>test</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>test</string>
-	<key>MBXAccessToken</key>
-	<string>pk.eyJ1IjoidHdpbGlnaHRuZXN0IiwiYSI6ImNsYXp1NTNtejA0OHA0MGxzNXZybmFhNDgifQ.xFbq8XNFK5SqC6-NC_ejlQ</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -19,6 +13,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>MBXAccessToken</key>
+	<string>pk.eyJ1IjoidHdpbGlnaHRuZXN0IiwiYSI6ImNsYXp1NTNtejA0OHA0MGxzNXZybmFhNDgifQ.xFbq8XNFK5SqC6-NC_ejlQ</string>
 	<key>MKDirectionsApplicationSupportedModes</key>
 	<array>
 		<string>MKDirectionsModeBike</string>
@@ -55,8 +51,10 @@
 	</dict>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>fetch</string>
 		<string>location</string>
 		<string>processing</string>
+		<string>remote-notification</string>
 	</array>
 </dict>
 </plist>

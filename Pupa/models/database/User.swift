@@ -33,7 +33,7 @@ class User : Codable {
     }
     
     init(data: Data){
-        var tmpUser = try? JSONDecoder().decode(User.self,from:data)
+        let tmpUser = try? JSONDecoder().decode(User.self,from:data)
         self.Id = tmpUser!.Id
         self.Login = tmpUser!.Login
         self.Email = tmpUser!.Email

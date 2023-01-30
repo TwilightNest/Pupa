@@ -15,6 +15,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // init chat users
         chatUsers = api.getChatUsers(chatId: chatId)!
         chatUsers.forEach({ user in
             if user.Id == api.currentUser?.Id{
@@ -24,6 +25,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLa
             }
         })
         
+        // init chat messages
         messages = api.getChatMessages(chatId: chatId)!
         messages.forEach({ message in
             if message.senderUserId == api.currentUser?.Id{
@@ -45,11 +47,13 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLa
         messagesCollectionView.reloadData()
     }
     
+    // send message button click
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+        //check empty message
         guard !text.replacingOccurrences(of: " ", with: "").isEmpty else {
             return
         }
-        var newMessage = Message()
+        let newMessage = Message()
         newMessage.chatId = chatId
         newMessage.senderUserId = api.currentUser!.Id
         newMessage.messageBody = text

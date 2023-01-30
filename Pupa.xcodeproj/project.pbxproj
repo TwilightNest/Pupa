@@ -19,7 +19,7 @@
 		ED1DE9362954AC8B00841C0D /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9352954AC8B00841C0D /* AuthController.swift */; };
 		ED1DE9382954ACA300841C0D /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9372954ACA300841C0D /* RegisterController.swift */; };
 		ED1DE93D2954AE3100841C0D /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE93C2954AE3100841C0D /* MapController.swift */; };
-		ED1DE93F2954AE7200841C0D /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE93E2954AE7200841C0D /* MessagesController.swift */; };
+		ED1DE93F2954AE7200841C0D /* MessengerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE93E2954AE7200841C0D /* MessengerController.swift */; };
 		ED1DE9412954AE9600841C0D /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9402954AE9600841C0D /* ProfileController.swift */; };
 		ED1DE9432954AEC500841C0D /* AddFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9422954AEC500841C0D /* AddFriendController.swift */; };
 		ED1DE9482954B0D900841C0D /* ApiProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DE9472954B0D900841C0D /* ApiProcessor.swift */; };
@@ -62,7 +62,7 @@
 		ED1DE9352954AC8B00841C0D /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		ED1DE9372954ACA300841C0D /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		ED1DE93C2954AE3100841C0D /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
-		ED1DE93E2954AE7200841C0D /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
+		ED1DE93E2954AE7200841C0D /* MessengerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerController.swift; sourceTree = "<group>"; };
 		ED1DE9402954AE9600841C0D /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		ED1DE9422954AEC500841C0D /* AddFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendController.swift; sourceTree = "<group>"; };
 		ED1DE9472954B0D900841C0D /* ApiProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProcessor.swift; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		ED1DE93A2954ADEB00841C0D /* messenger */ = {
 			isa = PBXGroup;
 			children = (
-				ED1DE93E2954AE7200841C0D /* MessagesController.swift */,
+				ED1DE93E2954AE7200841C0D /* MessengerController.swift */,
 				ED67DE3B29574FAA00AC25D6 /* ChatViewController.swift */,
 			);
 			path = messenger;
@@ -452,7 +452,7 @@
 				ED9E7E722957F0A200D47A7B /* Statistic.swift in Sources */,
 				ED6864D22958B95C00DBEEC9 /* StatisticModel.swift in Sources */,
 				ED1DE90E2954A36C00841C0D /* SceneDelegate.swift in Sources */,
-				ED1DE93F2954AE7200841C0D /* MessagesController.swift in Sources */,
+				ED1DE93F2954AE7200841C0D /* MessengerController.swift in Sources */,
 				ED6783C4295A1CE700054A93 /* UsersChat.swift in Sources */,
 				ED67DE402957609900AC25D6 /* MKSender.swift in Sources */,
 				ED1DE94C2954B12000841C0D /* AlertHelper.swift in Sources */,
@@ -616,6 +616,8 @@
 				INFOPLIST_FILE = Pupa/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Pupa;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = test;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = test;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -650,6 +652,8 @@
 				INFOPLIST_FILE = Pupa/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Pupa;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = test;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = test;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
